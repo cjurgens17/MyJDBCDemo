@@ -1,3 +1,5 @@
+package com.Utils;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
@@ -8,7 +10,7 @@ import java.util.Properties;
 public class ConnectionManager {
 
     //this is a singleton-meaning when we call this instance we are always referring
-    //to the same instance of this ConnectionManager class.
+    //to the same instance of this com.Utils.ConnectionManager class.
     public static ConnectionManager connectionManager;
 
     //this is our conncection instance
@@ -35,7 +37,7 @@ public class ConnectionManager {
         return connection;
     }
 
-    public static Connection connect() {
+    private static Connection connect() {
 
         try {
             //this creates a new properties list with no values
